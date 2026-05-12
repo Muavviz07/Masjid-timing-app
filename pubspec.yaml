@@ -1,0 +1,63 @@
+name: masjid_timing_app
+description: Sujoodly - Find Peace Nearby
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  package_info_plus: ^8.0.0
+  #google_fonts: ^6.1.0
+  shared_preferences: ^2.2.2
+  url_launcher: ^6.2.5
+  intl: ^0.19.0
+  home_widget: ^0.7.0
+  # RESTORED LATEST VERSIONS (No conflicts now)
+  google_fonts: ^6.1.0
+  geolocator: ^12.0.0
+  flutter_map: ^7.0.0
+  latlong2: ^0.9.1
+    # FIXED: Latest Firebase Versions to stop the PigeonUserDetails crash
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  firebase_auth: ^5.3.1
+  google_sign_in: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_native_splash: ^2.3.1
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+# --- SPLASH CONFIG ---
+flutter_native_splash:
+  color: "#F7F4EF"
+  color_dark: "#121212"
+  android_12:
+    color: "#F7F4EF"
+    color_dark: "#121212"
+    icon_background_color: "#F7F4EF"
+    icon_background_color_dark: "#121212"
+
+# --- ICON CONFIG (MUST BE AT THE ROOT LEVEL, NO INDENTATION) ---
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  min_sdk_android: 21
+
+  # 1. Used for iOS (Solid square, no transparency)
+  image_path: "assets/icon.png"
+
+  # 2. Used for Modern Android (Layers)
+  adaptive_icon_background: "#F7F4EF"
+  adaptive_icon_foreground: "assets/icon-test.png"
